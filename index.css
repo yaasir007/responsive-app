@@ -5,7 +5,7 @@
 }
 
 .test {
-  padding-inline: .5rem;
+  padding-inline: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,6 +31,8 @@
   display: none;
   background-color: lightgoldenrodyellow;
   padding: 1.5rem;
+  position: fixed;
+  width: 100%;
 }
 
 .items {
@@ -45,10 +47,24 @@
   text-decoration: none;
   color: black;
   font-size: 1.3rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .on {
   transition: all 3s ease-in-out;
   display: block;
+}
+
+@media (min-width: 600px) {
+  .menu-icon {
+    display: none;
+  }
+
+  .items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
 }
